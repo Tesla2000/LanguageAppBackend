@@ -13,7 +13,7 @@ def authenticate_token(token):
     try:
         # Decode and verify the token
         payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        return payload['login']  # Assuming login is stored in the token
+        return payload['username']
     except jwt.ExpiredSignatureError:
         return None  # Token has expired
     except jwt.InvalidTokenError:
@@ -22,6 +22,8 @@ def authenticate_token(token):
 
 @app.before_request
 def check_token():
+    if request.endpoint in ['login', 'register']:
+        return
     if request.endpoint in ['get_new_question', 'get_initial_question']:
         if 'Authorization' not in request.headers:
             abort(401)  # Unauthorized if Authorization header is missing
@@ -30,6 +32,7 @@ def check_token():
         login = authenticate_token(token)
         if not login:
             abort(401)  # Unauthorized if token is invalid or expired
+
 
 def generate_token(username):
     # Set expiration time for the token (e.g., 1 day from now)
@@ -40,4 +43,4 @@ def generate_token(username):
     }
     # Generate JWT token
     token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
-    return token.decode()
+    return token

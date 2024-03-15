@@ -1,5 +1,6 @@
 from flask import request, jsonify
 
+from Config import Config
 from app import app
 from authentication import generate_token
 
@@ -10,11 +11,11 @@ def login():
         data = request.json
         username = data.get('username')
         password = data.get('password')
-        users
-
-        if username in users and users[username]['password'] == password:
-            # Successful login, generate and return token
-            token = generate_token(username)
-            return jsonify({'token': token}), 200
-        else:
+        with Config.users_path.open() as file:
+            while user := file.readline().strip():
+                if [username, password] == user.split():
+                    token = generate_token(username)
+                    return jsonify({'token': token}), 200
+                if username == user.split()[0]:
+                    break
             return jsonify({'error': 'Invalid username or password'}), 401
