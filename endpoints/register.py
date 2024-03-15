@@ -1,7 +1,7 @@
 from flask import request, jsonify
 
 from Config import Config
-from app import app
+from flask_app import app
 
 
 @app.route('/register', methods=['POST'])

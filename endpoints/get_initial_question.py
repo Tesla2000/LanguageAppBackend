@@ -1,7 +1,7 @@
 from itertools import takewhile, count
 
 from Config import Config
-from app import app
+from flask_app import app
 from endpoints._return_answer import _return_answer
 
 

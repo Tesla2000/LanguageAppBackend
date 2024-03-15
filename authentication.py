@@ -4,7 +4,7 @@ import jwt
 
 from flask import request, abort
 
-from app import app
+from flask_app import app
 
 SECRET_KEY = "L2cRs29YMzIo4FD8TNBSQ2"
 
