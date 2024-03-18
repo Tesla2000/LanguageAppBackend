@@ -1,7 +1,7 @@
 from collections import defaultdict
 from itertools import filterfalse
 from math import sqrt, exp
-from random import random, choice, choices
+from random import random, choices
 from statistics import fmean
 
 from Config import Config
@@ -16,13 +16,10 @@ def _return_next_question(username: str) -> str:
         data_divided_to_sentences[question_index].append(is_correct)
     del user_data
     if data_divided_to_sentences and (
-        random() * Config.repetition_rate
-        < (
-            1
-            - fmean(
-                sum(value) / len(value) for value in data_divided_to_sentences.values()
-            )
-        )
+        random()
+        < min(fmean(
+            sum(value) / len(value) for value in data_divided_to_sentences.values()
+        ) * Config.repetition_rate_factor, Config.maximal_repetition_rate)
         or len(data_divided_to_sentences) == len(sentences)
     ):
         question_index = choices(

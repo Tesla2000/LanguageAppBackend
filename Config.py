@@ -8,7 +8,8 @@ class _ModelConfig:
 
 
 class Config(_ModelConfig):
-    repetition_rate = 0.5
+    maximal_repetition_rate = .95
+    repetition_rate_factor = 2
     root = Path(__file__).parent
     data_path = root / "data"
     encoders = root / "encoders"
