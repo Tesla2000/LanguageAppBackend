@@ -1,4 +1,3 @@
-from itertools import takewhile, count
 from time import time
 
 from flask import request
