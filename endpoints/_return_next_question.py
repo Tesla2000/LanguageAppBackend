@@ -16,26 +16,34 @@ def _return_next_question(username: str) -> str:
         data_divided_to_sentences[question_index].append(is_correct)
     del user_data
     if data_divided_to_sentences and (
-        random() * Config.repetition_rate < (
-        1 - fmean(sum(value) / len(value) for value in data_divided_to_sentences.values()))
+        random() * Config.repetition_rate
+        < (
+            1
+            - fmean(
+                sum(value) / len(value) for value in data_divided_to_sentences.values()
+            )
+        )
         or len(data_divided_to_sentences) == len(sentences)
     ):
-        question_index = choices(tuple(data_divided_to_sentences.keys()), tuple(
-            map(
-                lambda item: exp(-sum(item[1])
-                                 / len(item[1])
-                                 * (
-                                     sqrt(sum(map(len, data_divided_to_sentences.values())))
-                                     / (1 + len(item[1]))
-                                 )),
-                data_divided_to_sentences.items(),
+        question_index = choices(
+            tuple(data_divided_to_sentences.keys()),
+            tuple(
+                map(
+                    lambda item: exp(
+                        -sum(item[1])
+                        / len(item[1])
+                        * (
+                            sqrt(sum(map(len, data_divided_to_sentences.values())))
+                            / (1 + len(item[1]))
+                        )
+                    ),
+                    data_divided_to_sentences.items(),
+                ),
             ),
-        ))[0]
+        )[0]
     else:
         question_index = next(
-            filterfalse(
-                data_divided_to_sentences.__contains__, range(len(questions))
-            )
+            filterfalse(data_divided_to_sentences.__contains__, range(len(questions)))
         )
     next_question = questions[question_index]
     next_sentence = f"{next_question};{sentences[next_question]}"
