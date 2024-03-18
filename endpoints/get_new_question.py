@@ -13,9 +13,9 @@ from sentences import sentences
 def get_new_question():
     login, question, answer = request.data.decode().split(";")
     correct = answer.lower().strip(".?!").replace(",", "") in map(
-        lambda correct_version: correct_version.lower().strip(".?!").replace(",", ""), sentences[
-            question
-        ].split(';'))
+        lambda correct_version: correct_version.lower().strip(".?!").replace(",", ""),
+        sentences[question].split(";"),
+    )
     if correct:
         file = Config.correct_answers_path(login).open("a+")
     else:
