@@ -1,14 +1,30 @@
 from pathlib import Path
 
 
-class Config:
+class _ModelConfig:
+    use_pretrained = True
+    encoder_hidden_size = 16
+    model_file_name_format = "%Y%m%d%H%M%S"
+
+
+class Config(_ModelConfig):
     repetition_rate = 0.5
     root = Path(__file__).parent
-    data_path = root / 'data'
-    incorrect_answers_path = lambda login: Config.data_path / f"{login}_incorrect_answers.txt"
-    correct_answers_path = lambda login: Config.data_path / f"{login}_correct_answers.txt"
-    users_path = data_path / 'users.txt'
+    data_path = root / "data"
+    encoders = root / "encoders"
+    fully_connected_layers = root / "fully_connected_layers"
+    incorrect_answers_ending = "_incorrect_answers.txt"
+    correct_answers_ending = "_correct_answers.txt"
+    incorrect_answers_path = (
+        lambda login: Config.data_path / f"{login}{Config.incorrect_answers_ending}"
+    )
+    correct_answers_path = (
+        lambda login: Config.data_path / f"{login}{Config.correct_answers_ending}"
+    )
+    users_path = data_path / "users.txt"
+    encoders.mkdir(exist_ok=True)
+    fully_connected_layers.mkdir(exist_ok=True)
 
 
 if not Config.users_path.exists():
-    Config.users_path.write_text('')
+    Config.users_path.write_text("")
