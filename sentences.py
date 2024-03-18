@@ -1,4 +1,6 @@
-sentences = {
+from collections import OrderedDict
+
+sentences = OrderedDict({
     "Hello.": "Hallo.",
     "Hi!": "Hallo!",
     "Good morning.": "Guten Morgen.",
@@ -76,4 +78,5 @@ sentences = {
     "It’s windy.": "Es ist windig.",
     "It’s stormy.": "Es ist stürmisch.",
     "It’s changeable.": "Es ist veränderlich.",
-}
+})
+questions = tuple(sentences.keys())
