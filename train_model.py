@@ -5,25 +5,15 @@ from torch import nn
 from torch.optim import Adam
 
 from Config import Config
-from ai_component.Encoder import Encoder
 from ai_component.PredictingModel import PredictingModel
 from ai_component.collect_data import collect_data
+from ai_component.get_pretrained_model import get_pretrained_model
 from sentences import sentences
 
 
 def train_model():
     if Config.use_pretrained:
-        encoder = Encoder(len(sentences), Config.encoder_hidden_size)
-        encoder.load_state_dict(
-            torch.load(max(Config.encoders.iterdir(), key=lambda file: file.name))
-        )
-        fc = nn.Linear(len(sentences), 1)
-        fc.load_state_dict(
-            torch.load(
-                max(Config.fully_connected_layers.iterdir(), key=lambda file: file.name)
-            )
-        )
-        model = PredictingModel(len(sentences), Config.encoder_hidden_size, encoder, fc)
+        model = get_pretrained_model()
     else:
         model = PredictingModel(len(sentences), Config.encoder_hidden_size)
     optimizer = Adam(model.parameters())

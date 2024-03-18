@@ -8,7 +8,8 @@ class _ModelConfig:
 
 
 class Config(_ModelConfig):
-    repetition_rate = 0.5
+    maximal_repetition_rate = .95
+    repetition_rate_factor = 2
     root = Path(__file__).parent
     data_path = root / "data"
     encoders = root / "encoders"
@@ -16,10 +17,11 @@ class Config(_ModelConfig):
     incorrect_answers_ending = "_incorrect_answers.txt"
     correct_answers_ending = "_correct_answers.txt"
     incorrect_answers_path = (
-        lambda login: Config.data_path / f"{login}{Config.incorrect_answers_ending}"
+        lambda username: Config.data_path
+        / f"{username}{Config.incorrect_answers_ending}"
     )
     correct_answers_path = (
-        lambda login: Config.data_path / f"{login}{Config.correct_answers_ending}"
+        lambda username: Config.data_path / f"{username}{Config.correct_answers_ending}"
     )
     users_path = data_path / "users.txt"
     encoders.mkdir(exist_ok=True)
