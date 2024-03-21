@@ -5,10 +5,12 @@ class _ModelConfig:
     use_pretrained = True
     encoder_hidden_size = 16
     model_file_name_format = "%Y%m%d%H%M%S"
+    trained_language = "en_de"
 
 
 class Config(_ModelConfig):
-    maximal_repetition_rate = .95
+    worst_answers_percentile = 25
+    maximal_repetition_rate = 0.95
     repetition_rate_factor = 1
     root = Path(__file__).parent
     data_path = root / "data"
@@ -17,11 +19,12 @@ class Config(_ModelConfig):
     incorrect_answers_ending = "_incorrect_answers.txt"
     correct_answers_ending = "_correct_answers.txt"
     incorrect_answers_path = (
-        lambda username: Config.data_path
-        / f"{username}{Config.incorrect_answers_ending}"
+        lambda username, language: Config.data_path
+        / f"{username}_{language}{Config.incorrect_answers_ending}"
     )
     correct_answers_path = (
-        lambda username: Config.data_path / f"{username}{Config.correct_answers_ending}"
+        lambda username, language: Config.data_path
+        / f"{username}_{language}{Config.correct_answers_ending}"
     )
     users_path = data_path / "users.txt"
     encoders.mkdir(exist_ok=True)

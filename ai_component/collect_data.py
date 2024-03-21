@@ -1,17 +1,20 @@
 from collections import defaultdict
 
 from Config import Config
-from sentences import questions
 
 
-def collect_data(username: str = None) -> dict[str, list[tuple[int, int]]]:
+def collect_data(
+    language: str, username: str = None
+) -> dict[str, list[tuple[int, int]]]:
     answers = defaultdict(list)
+    language_dict: dict = getattr(sentences, language)
+    questions = tuple(language_dict.keys())
     for file in (
         Config.data_path.iterdir()
         if username is None
         else (
-            Config.incorrect_answers_path(username),
-            Config.correct_answers_path(username),
+            Config.incorrect_answers_path(username, language),
+            Config.correct_answers_path(username, language),
         )
     ):
         if file == Config.users_path:
@@ -29,4 +32,6 @@ def collect_data(username: str = None) -> dict[str, list[tuple[int, int]]]:
 
 
 if __name__ == "__main__":
-    collect_data()
+    import sentences
+
+    collect_data(getattr(sentences, Config.trained_language))

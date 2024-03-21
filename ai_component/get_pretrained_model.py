@@ -4,18 +4,21 @@ from torch import nn
 from Config import Config
 from ai_component.Encoder import Encoder
 from ai_component.PredictingModel import PredictingModel
-from sentences import sentences
+import sentences
 
 
 def get_pretrained_model() -> PredictingModel:
-    encoder = Encoder(len(sentences), Config.encoder_hidden_size)
+    language_dictionary = getattr(sentences, Config.trained_language)
+    encoder = Encoder(len(language_dictionary), Config.encoder_hidden_size)
     encoder.load_state_dict(
         torch.load(max(Config.encoders.iterdir(), key=lambda file: file.name))
     )
-    fc = nn.Linear(len(sentences), 1)
+    fc = nn.Linear(len(language_dictionary), 1)
     fc.load_state_dict(
         torch.load(
             max(Config.fully_connected_layers.iterdir(), key=lambda file: file.name)
         )
     )
-    return PredictingModel(len(sentences), Config.encoder_hidden_size, encoder, fc)
+    return PredictingModel(
+        len(language_dictionary), Config.encoder_hidden_size, encoder, fc
+    )

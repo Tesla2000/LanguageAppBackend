@@ -13,7 +13,8 @@ def login():
         password = data.get("password")
         with Config.users_path.open() as file:
             while user := file.readline().strip():
-                if [username, password] == user.split():
+                db_username, db_password, *_ = user.split()
+                if (username, password) == (db_username, db_password):
                     token = generate_token(username)
                     return jsonify({"token": token}), 200
                 if username == user.split()[0]:
