@@ -86,7 +86,7 @@ pl_es = OrderedDict(
     {
         "Cześć.": "Hola.",
         "Dzień dobry.": "Buen día.",
-        "Dobry wieczór.": "Buenas noches.",
+        "Dobry wieczór.": "Buenas tardes.",
         "Dobranoc.": "Buenas noches.",
         "Do zobaczenia wkrótce.": "Nos vemos pronto.",
         "Do zobaczenia jutro.": "Nos vemos mañana.",

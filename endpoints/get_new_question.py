@@ -10,8 +10,8 @@ from endpoints._return_next_question import _return_next_question
 
 @app.route("/<language>", methods=["POST"])
 def post_answer(language: str):
-    username, question, answer, language_dict = request.data.decode().split(";")
-    language_dict = getattr(sentences, language_dict)
+    username, question, answer = request.data.decode().split(";")
+    language_dict = getattr(sentences, language)
     correct = answer.lower().strip(".?¿!¡").replace(",", "") in map(
         lambda correct_version: correct_version.lower().strip(".?¿!¡").replace(",", ""),
         language_dict[question].split(";"),

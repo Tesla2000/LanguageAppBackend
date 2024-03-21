@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 from Config import Config
+import sentences
 
 
 def collect_data(
@@ -32,6 +33,4 @@ def collect_data(
 
 
 if __name__ == "__main__":
-    import sentences
-
     collect_data(getattr(sentences, Config.trained_language))
