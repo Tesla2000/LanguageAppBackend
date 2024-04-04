@@ -8,17 +8,18 @@ from Config import Config
 from ai_component.PredictingModel import PredictingModel
 from ai_component.collect_data import collect_data
 from ai_component.get_pretrained_model import get_pretrained_model
-from sentences import sentences
+import sentences
 
 
 def train_model():
+    language_dict = getattr(sentences, Config.trained_language)
     if Config.use_pretrained:
         model = get_pretrained_model()
     else:
-        model = PredictingModel(len(sentences), Config.encoder_hidden_size)
+        model = PredictingModel(len(language_dict), Config.encoder_hidden_size)
     optimizer = Adam(model.parameters())
     loss_function = nn.BCELoss()
-    data = collect_data()
+    data = collect_data(language_dict)
     for user_sentences in data.values():
         previous_sentences = []
         for next_sentence in user_sentences:
