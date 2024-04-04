@@ -26,7 +26,7 @@ class Config(_ModelConfig):
         lambda username, language: Config.data_path
         / f"{username}_{language}{Config.correct_answers_ending}"
     )
-    users_path = data_path / "users.txt"
+    users_path = data_path / "users_unhashed.txt"
     encoders.mkdir(exist_ok=True)
     fully_connected_layers.mkdir(exist_ok=True)
 
