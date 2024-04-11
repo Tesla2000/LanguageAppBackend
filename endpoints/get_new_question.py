@@ -1,27 +1,22 @@
-from time import time
-
 from flask import request
 
-import sentences
-from Config import Config
-from flask_app import app
+from ai_component.train_sample import train_sample
+from database.insert_answer import insert_answer
 from endpoints._return_next_question import _return_next_question
+from flask_app import app
+from sentences.sentences import sentences
 
 
 @app.route("/<language>", methods=["POST"])
 def post_answer(language: str):
     username, question, answer = request.data.decode().split(";")
-    language_dict = getattr(sentences, language)
+    language_dict = sentences.get(language)
     correct = answer.lower().strip(".?¿!¡").replace(",", "") in map(
         lambda correct_version: correct_version.lower().strip(".?¿!¡").replace(",", ""),
         language_dict[question].split(";"),
     )
-    if correct:
-        file = Config.correct_answers_path(username, language).open("a+")
-    else:
-        file = Config.incorrect_answers_path(username, language).open("a+")
-    file.write(f"{int(time())};{question};{answer}\n")
+    train_sample()
+    insert_answer(question, answer, username, correct)
     if not correct:
         return ""
-    file.close()
     return _return_next_question(username, language)
