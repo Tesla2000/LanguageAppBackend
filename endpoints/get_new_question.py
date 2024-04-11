@@ -1,5 +1,6 @@
 from flask import request
 
+from ai_component.train_sample import train_sample
 from database.insert_answer import insert_answer
 from endpoints._return_next_question import _return_next_question
 from flask_app import app
@@ -14,6 +15,7 @@ def post_answer(language: str):
         lambda correct_version: correct_version.lower().strip(".?¿!¡").replace(",", ""),
         language_dict[question].split(";"),
     )
+    train_sample()
     insert_answer(question, answer, username, correct)
     if not correct:
         return ""

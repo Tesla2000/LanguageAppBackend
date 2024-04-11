@@ -1,8 +1,9 @@
+from Config import Config
 from .cursor import cursor
 
-_unique_questions_query = '''
+_unique_questions_query = f'''
 SELECT DISTINCT question
-FROM QuestionAnswers
+FROM {Config.question_answers_table}
 WHERE username = ?;
 '''
 

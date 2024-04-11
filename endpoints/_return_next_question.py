@@ -3,9 +3,11 @@ from math import ceil
 from statistics import fmean
 
 import numpy as np
+import torch
+from torch import no_grad
 
 from Config import Config
-from ai_component.ChangeCalculator import chance_calculator
+from ai_component.ChanceCalculator import chance_calculator
 from database.get_answers import get_answers
 from database.get_user_questions import get_user_questions
 from sentences.sentences import sentences
@@ -20,7 +22,7 @@ def _mean_in_percentile(input, q):
 def _return_next_question(username: str, language: str) -> str:
     language_dict: dict = sentences.get(language)
     user_questions = get_user_questions(username)
-    odds = tuple(map(chance_calculator, map(partial(get_answers, username=username), user_questions)))
+    odds = tuple(map(chance_calculator.predict, map(partial(get_answers, username=username), user_questions)))
     questions = tuple(language_dict.keys())
     next_question_index = 1 + max(map(questions.index, user_questions))
     if next_question_index >= len(questions) or all(odd > Config.required_confidence for odd in odds):

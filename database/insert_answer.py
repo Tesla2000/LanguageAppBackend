@@ -1,7 +1,8 @@
+from Config import Config
 from .cursor import conn, cursor
 
-_insert_query = '''
-INSERT INTO QuestionAnswers (question, answer, username, is_answer_correct)
+_insert_query = f'''
+INSERT INTO {Config.question_answers_table} (question, answer, username, is_answer_correct)
 VALUES (?, ?, ?, ?);
 '''
 
