@@ -1,4 +1,3 @@
-import sentences
 from Config import Config
 from endpoints._return_next_question import _return_next_question
 from flask_app import app

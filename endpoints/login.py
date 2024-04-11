@@ -14,7 +14,9 @@ def login():
         with Config.users_path.open() as file:
             while user := file.readline().strip():
                 db_username, db_password, *_ = user.split()
-                if username == db_username and bcrypt.check_password_hash(db_password, password):
+                if username == db_username and bcrypt.check_password_hash(
+                    db_password, password
+                ):
                     token = generate_token(username)
                     return jsonify({"token": token}), 200
                 if username == user.split()[0]:

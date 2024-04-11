@@ -19,5 +19,7 @@ def register():
             if username == user.split()[0]:
                 return jsonify({"error": "Username already exists"}), 400
     with Config.users_path.open("a") as file:
-        file.write(f"{username} {bcrypt.generate_password_hash(data['password']).decode('utf-8')}\n")
+        file.write(
+            f"{username} {bcrypt.generate_password_hash(data['password']).decode('utf-8')}\n"
+        )
     return jsonify({"message": "User registered successfully"}), 201

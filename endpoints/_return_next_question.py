@@ -1,12 +1,14 @@
-from collections import defaultdict
-from itertools import filterfalse
-from math import sqrt, exp, ceil
-from random import random, choices
+from functools import partial
+from math import ceil
 from statistics import fmean
 
-import sentences
+import numpy as np
+
 from Config import Config
-from ai_component.collect_data import collect_data
+from ai_component.ChangeCalculator import chance_calculator
+from database.get_answers import get_answers
+from database.get_user_questions import get_user_questions
+from sentences.sentences import sentences
 
 
 def _mean_in_percentile(input, q):
@@ -16,49 +18,13 @@ def _mean_in_percentile(input, q):
 
 
 def _return_next_question(username: str, language: str) -> str:
-    language_dict: dict = getattr(sentences, language)
-    user_data = collect_data(language, username)[username]
-    data_divided_to_sentences = defaultdict(list)
-    for (_, question_index, is_correct) in user_data:
-        data_divided_to_sentences[question_index].append(is_correct)
-    del user_data
-    if data_divided_to_sentences and (
-        min(
-            _mean_in_percentile(
-                tuple(
-                    sum(value) / len(value)
-                    for value in data_divided_to_sentences.values()
-                ),
-                Config.worst_answers_percentile,
-            )
-            * Config.repetition_rate_factor,
-            Config.maximal_repetition_rate,
-        )
-        < random()
-        or len(data_divided_to_sentences) == len(language_dict)
-    ):
-        question_index = choices(
-            tuple(data_divided_to_sentences.keys()),
-            tuple(
-                map(
-                    lambda item: exp(
-                        -sum(item[1])
-                        / len(item[1])
-                        * (
-                            sqrt(sum(map(len, data_divided_to_sentences.values())))
-                            / (1 + len(item[1]))
-                        )
-                    ),
-                    data_divided_to_sentences.items(),
-                ),
-            ),
-        )[0]
-    else:
-        question_index = next(
-            filterfalse(
-                data_divided_to_sentences.__contains__, range(len(language_dict.keys()))
-            )
-        )
-    next_question = tuple(language_dict.keys())[question_index]
+    language_dict: dict = sentences.get(language)
+    user_questions = get_user_questions(username)
+    odds = tuple(map(chance_calculator, map(partial(get_answers, username=username), user_questions)))
+    questions = tuple(language_dict.keys())
+    next_question_index = 1 + max(map(questions.index, user_questions))
+    if next_question_index >= len(questions) or all(odd > Config.required_confidence for odd in odds):
+        next_question_index = np.argmin(odds)
+    next_question = questions[next_question_index]
     next_sentence = f"{next_question};{language_dict[next_question]}"
     return next_sentence
