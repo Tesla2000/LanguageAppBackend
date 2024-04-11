@@ -16,9 +16,12 @@ class _DatabaseConfig:
 
 
 class Config(_ModelConfig, _DatabaseConfig):
+    very_common_factor = .35
+    common_factor = .15
     root = Path(__file__).parent
     sentences = root / "sentences"
     data_path = root / "data"
+    open_ai_api_key = root / "api_key"
     database = root / "database" / 'mydatabase.db'
     users_path = data_path / "users.txt"
     model_weights = root / "model_weights.pth"

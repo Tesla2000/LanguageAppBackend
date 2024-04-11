@@ -1,10 +1,6 @@
 from functools import partial
-from math import ceil
-from statistics import fmean
 
 import numpy as np
-import torch
-from torch import no_grad
 
 from Config import Config
 from ai_component.ChanceCalculator import chance_calculator
@@ -13,13 +9,7 @@ from database.get_user_questions import get_user_questions
 from sentences.sentences import sentences
 
 
-def _mean_in_percentile(input, q):
-    data_sorted = sorted(input)
-    index = ceil(q / 100 * len(data_sorted))
-    return fmean(data_sorted[:index])
-
-
-def _return_next_question(username: str, language: str) -> str:
+def return_next_question(username: str, language: str) -> str:
     language_dict: dict = sentences.get(language)
     user_questions = get_user_questions(username)
     odds = tuple(map(chance_calculator.predict, map(partial(get_answers, username=username), user_questions)))

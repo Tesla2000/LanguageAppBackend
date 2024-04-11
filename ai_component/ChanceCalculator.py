@@ -27,6 +27,7 @@ class ChanceCalculator(nn.Module):
         self.eval()
         return self.forward(samples).item()
 
+
 chance_calculator = ChanceCalculator(Config.model_hidden_size)
 if Config.model_weights.exists():
     chance_calculator.load_state_dict(torch.load(Config.model_weights))

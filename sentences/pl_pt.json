@@ -1,1 +1,440 @@
-{"Cześć.": "Oi.", "Dzień dobry.": "Bom dia.", "Dobry wieczór.": "Boa noite.", "Dobranoc.": "Boa noite.", "Do zobaczenia wkrótce.": "Vejo você em breve.", "Do zobaczenia jutro.": "Vejo você amanhã.", "Do zobaczenia w sobotę.": "Vejo você no sábado.", "Do widzenia!": "Adeus!", "NIE.": "NÃO.", "Nie wiem.": "Não sei.", "Proszę.": "Por favor.", "Nie rozumiem.": "Eu não entendo.", "Dziękuję.": "Obrigado.", "Nie, dziękuję.": "Não, obrigado.", "Przepraszam.": "Desculpe.", "Przepraszam?": "Desculpe?", "OK!": "OK!", "Nie ma za co.": "De nada.", "Ile masz lat?": "Quantos anos você tem?", "Czy mogę zapytać, ile masz lat?": "Posso perguntar quantos anos você tem?", "Kiedy są twoje urodziny?": "Quando é seu aniversário?", "Mam lat.": "Eu tenho anos de idade.", "Skąd jesteś?": "De onde você é?", "Gdzie mieszkasz?": "Onde você mora?", "Jestem żonaty.": "Eu sou casado.", "Mam partnera.": "Eu tenho um parceiro.", "Jestem singlem.": "Sou solteiro.", "Jestem rozwiedziony.": "Eu sou divorciado.", "Jestem owdowiała.": "Eu sou viúvo.", "Czy masz jakieś dzieci?": "Você tem filhos?", "Mam dzieci.": "Eu tenho filhos.", "Nie mam żadnych dzieci.": "Eu não tenho filhos.", "Jak się masz?": "Como vai você?", "Jak leci?": "Como vai você?", "Jak się mają?": "Como eles estão?", "Dzięki bardzo dobrze a ty?": "Obrigado muito bem e você?", "Dobrze, dzięki.": "Bom obrigado.", "Świetnie!": "Ótimo!", "Tak sobie.": "Nada bom.", "Nieźle, dzięki.": "Nada mal, obrigado.", "Mogło być gorzej.": "Poderia ser pior.", "Nic mi nie jest.": "Estou bem.", "Jestem zmęczony.": "Estou cansado.", "Durst.": "Durst.", "Gdzie pracujesz?": "Onde você trabalha?", "Co robisz?": "O que você está fazendo?", "Czym się zajmujesz?": "O que você faz?", "Jestem samozatrudniony.": "Eu trabalho por conta própria.", "Jestem bezrobotny.": "Eu estou desempregado.", "Jestem na uniwersytecie.": "Estou na universidade.", "Jestem na emeryturze.": "Estou aposentado.", "Ja podróżuję.": "Estou viajando.", "Pracuję w domu.": "Eu trabalho em casa.", "Jest dziewiąta.": "É nono.", "To dziesięć w ciągu dziewięciu.": "São dez em nove.", "Jest piętnaście po dziewiątej.": "São quinze depois das nove.", "Jest 25 mini dziewiątych.": "Há 25 mini nove.", "Jest w pół do dziesiątej.": "É da metade a dez.", "To 20 do dziesięciu.": "São 20 a dez.", "To kwartał do dziesięciu.": "Este é um quarto a dez.", "To pięć do dziesięciu.": "São de cinco a dez.", "Jest 17:30.": "São 17:30.", "Gdy?": "Quando?", "Jaka jest pogoda?": "Como está o tempo?", "Będzie padać?": "Vai chover?", "Co za piękny dzień!": "Que dia lindo!", "Jaka okropna pogoda!": "Quão terrível clima!", "Jest słonecznie.": "Está ensolarado.", "Jest mgliście.": "Está nublado.", "Jest lodowato.": "É gelado.", "Jest wietrznie.": "Está ventando.", "Jest burzowo.": "É tempestuoso.", "Jest zmienny.": "É variável."}
+{
+  "Cze\u015b\u0107.": [
+    [
+      "Oi."
+    ],
+    []
+  ],
+  "Dzie\u0144 dobry.": [
+    [
+      "Bom dia."
+    ],
+    []
+  ],
+  "Dobry wiecz\u00f3r.": [
+    [
+      "Boa noite."
+    ],
+    []
+  ],
+  "Dobranoc.": [
+    [
+      "Boa noite."
+    ],
+    []
+  ],
+  "Do zobaczenia wkr\u00f3tce.": [
+    [
+      "Vejo voc\u00ea em breve."
+    ],
+    []
+  ],
+  "Do zobaczenia jutro.": [
+    [
+      "Vejo voc\u00ea amanh\u00e3."
+    ],
+    []
+  ],
+  "Do zobaczenia w sobot\u0119.": [
+    [
+      "Vejo voc\u00ea no s\u00e1bado."
+    ],
+    []
+  ],
+  "Do widzenia!": [
+    [
+      "Adeus!"
+    ],
+    []
+  ],
+  "NIE.": [
+    [
+      "N\u00c3O."
+    ],
+    []
+  ],
+  "Nie wiem.": [
+    [
+      "N\u00e3o sei."
+    ],
+    []
+  ],
+  "Prosz\u0119.": [
+    [
+      "Por favor."
+    ],
+    []
+  ],
+  "Nie rozumiem.": [
+    [
+      "Eu n\u00e3o entendo."
+    ],
+    []
+  ],
+  "Dzi\u0119kuj\u0119.": [
+    [
+      "Obrigado."
+    ],
+    []
+  ],
+  "Nie, dzi\u0119kuj\u0119.": [
+    [
+      "N\u00e3o, obrigado."
+    ],
+    []
+  ],
+  "Przepraszam.": [
+    [
+      "Desculpe."
+    ],
+    []
+  ],
+  "Przepraszam?": [
+    [
+      "Desculpe?"
+    ],
+    []
+  ],
+  "OK!": [
+    [
+      "OK!"
+    ],
+    []
+  ],
+  "Nie ma za co.": [
+    [
+      "De nada."
+    ],
+    []
+  ],
+  "Ile masz lat?": [
+    [
+      "Quantos anos voc\u00ea tem?"
+    ],
+    []
+  ],
+  "Czy mog\u0119 zapyta\u0107, ile masz lat?": [
+    [
+      "Posso perguntar quantos anos voc\u00ea tem?"
+    ],
+    []
+  ],
+  "Kiedy s\u0105 twoje urodziny?": [
+    [
+      "Quando \u00e9 seu anivers\u00e1rio?"
+    ],
+    []
+  ],
+  "Mam lat.": [
+    [
+      "Eu tenho anos de idade."
+    ],
+    []
+  ],
+  "Sk\u0105d jeste\u015b?": [
+    [
+      "De onde voc\u00ea \u00e9?"
+    ],
+    []
+  ],
+  "Gdzie mieszkasz?": [
+    [
+      "Onde voc\u00ea mora?"
+    ],
+    []
+  ],
+  "Jestem \u017conaty.": [
+    [
+      "Eu sou casado."
+    ],
+    []
+  ],
+  "Mam partnera.": [
+    [
+      "Eu tenho um parceiro."
+    ],
+    []
+  ],
+  "Jestem singlem.": [
+    [
+      "Sou solteiro."
+    ],
+    []
+  ],
+  "Jestem rozwiedziony.": [
+    [
+      "Eu sou divorciado."
+    ],
+    []
+  ],
+  "Jestem owdowia\u0142a.": [
+    [
+      "Eu sou vi\u00favo."
+    ],
+    []
+  ],
+  "Czy masz jakie\u015b dzieci?": [
+    [
+      "Voc\u00ea tem filhos?"
+    ],
+    []
+  ],
+  "Mam dzieci.": [
+    [
+      "Eu tenho filhos."
+    ],
+    []
+  ],
+  "Nie mam \u017cadnych dzieci.": [
+    [
+      "Eu n\u00e3o tenho filhos."
+    ],
+    []
+  ],
+  "Jak si\u0119 masz?": [
+    [
+      "Como vai voc\u00ea?"
+    ],
+    []
+  ],
+  "Jak leci?": [
+    [
+      "Como vai voc\u00ea?"
+    ],
+    []
+  ],
+  "Jak si\u0119 maj\u0105?": [
+    [
+      "Como eles est\u00e3o?"
+    ],
+    []
+  ],
+  "Dzi\u0119ki bardzo dobrze a ty?": [
+    [
+      "Obrigado muito bem e voc\u00ea?"
+    ],
+    []
+  ],
+  "Dobrze, dzi\u0119ki.": [
+    [
+      "Bom obrigado."
+    ],
+    []
+  ],
+  "\u015awietnie!": [
+    [
+      "\u00d3timo!"
+    ],
+    []
+  ],
+  "Tak sobie.": [
+    [
+      "Nada bom."
+    ],
+    []
+  ],
+  "Nie\u017ale, dzi\u0119ki.": [
+    [
+      "Nada mal, obrigado."
+    ],
+    []
+  ],
+  "Mog\u0142o by\u0107 gorzej.": [
+    [
+      "Poderia ser pior."
+    ],
+    []
+  ],
+  "Nic mi nie jest.": [
+    [
+      "Estou bem."
+    ],
+    []
+  ],
+  "Jestem zm\u0119czony.": [
+    [
+      "Estou cansado."
+    ],
+    []
+  ],
+  "Durst.": [
+    [
+      "Durst."
+    ],
+    []
+  ],
+  "Gdzie pracujesz?": [
+    [
+      "Onde voc\u00ea trabalha?"
+    ],
+    []
+  ],
+  "Co robisz?": [
+    [
+      "O que voc\u00ea est\u00e1 fazendo?"
+    ],
+    []
+  ],
+  "Czym si\u0119 zajmujesz?": [
+    [
+      "O que voc\u00ea faz?"
+    ],
+    []
+  ],
+  "Jestem samozatrudniony.": [
+    [
+      "Eu trabalho por conta pr\u00f3pria."
+    ],
+    []
+  ],
+  "Jestem bezrobotny.": [
+    [
+      "Eu estou desempregado."
+    ],
+    []
+  ],
+  "Jestem na uniwersytecie.": [
+    [
+      "Estou na universidade."
+    ],
+    []
+  ],
+  "Jestem na emeryturze.": [
+    [
+      "Estou aposentado."
+    ],
+    []
+  ],
+  "Ja podr\u00f3\u017cuj\u0119.": [
+    [
+      "Estou viajando."
+    ],
+    []
+  ],
+  "Pracuj\u0119 w domu.": [
+    [
+      "Eu trabalho em casa."
+    ],
+    []
+  ],
+  "Jest dziewi\u0105ta.": [
+    [
+      "\u00c9 nono."
+    ],
+    []
+  ],
+  "To dziesi\u0119\u0107 w ci\u0105gu dziewi\u0119ciu.": [
+    [
+      "S\u00e3o dez em nove."
+    ],
+    []
+  ],
+  "Jest pi\u0119tna\u015bcie po dziewi\u0105tej.": [
+    [
+      "S\u00e3o quinze depois das nove."
+    ],
+    []
+  ],
+  "Jest 25 mini dziewi\u0105tych.": [
+    [
+      "H\u00e1 25 mini nove."
+    ],
+    []
+  ],
+  "Jest w p\u00f3\u0142 do dziesi\u0105tej.": [
+    [
+      "\u00c9 da metade a dez."
+    ],
+    []
+  ],
+  "To 20 do dziesi\u0119ciu.": [
+    [
+      "S\u00e3o 20 a dez."
+    ],
+    []
+  ],
+  "To kwarta\u0142 do dziesi\u0119ciu.": [
+    [
+      "Este \u00e9 um quarto a dez."
+    ],
+    []
+  ],
+  "To pi\u0119\u0107 do dziesi\u0119ciu.": [
+    [
+      "S\u00e3o de cinco a dez."
+    ],
+    []
+  ],
+  "Jest 17:30.": [
+    [
+      "S\u00e3o 17:30."
+    ],
+    []
+  ],
+  "Gdy?": [
+    [
+      "Quando?"
+    ],
+    []
+  ],
+  "Jaka jest pogoda?": [
+    [
+      "Como est\u00e1 o tempo?"
+    ],
+    []
+  ],
+  "B\u0119dzie pada\u0107?": [
+    [
+      "Vai chover?"
+    ],
+    []
+  ],
+  "Co za pi\u0119kny dzie\u0144!": [
+    [
+      "Que dia lindo!"
+    ],
+    []
+  ],
+  "Jaka okropna pogoda!": [
+    [
+      "Qu\u00e3o terr\u00edvel clima!"
+    ],
+    []
+  ],
+  "Jest s\u0142onecznie.": [
+    [
+      "Est\u00e1 ensolarado."
+    ],
+    []
+  ],
+  "Jest mgli\u015bcie.": [
+    [
+      "Est\u00e1 nublado."
+    ],
+    []
+  ],
+  "Jest lodowato.": [
+    [
+      "\u00c9 gelado."
+    ],
+    []
+  ],
+  "Jest wietrznie.": [
+    [
+      "Est\u00e1 ventando."
+    ],
+    []
+  ],
+  "Jest burzowo.": [
+    [
+      "\u00c9 tempestuoso."
+    ],
+    []
+  ],
+  "Jest zmienny.": [
+    [
+      "\u00c9 vari\u00e1vel."
+    ],
+    []
+  ]
+}
