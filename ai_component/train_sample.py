@@ -9,7 +9,7 @@ from Config import Config
 from ai_component.ChanceCalculator import chance_calculator
 
 bce_loss = nn.BCELoss()
-optimizer = Adam(chance_calculator.parameters())
+optimizer = Adam(chance_calculator.parameters(), lr=1e-2)
 
 
 def train_sample(samples: list[tuple[int, bool]], answer: bool):

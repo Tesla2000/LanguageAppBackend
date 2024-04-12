@@ -11,7 +11,6 @@ def check_if_answer_correct(
         lambda text: text.lower().strip(".?¿!¡").replace(",", "").replace("-", " ")
     )
     positive_answers = expected_answers[0]
-    negative_answers = expected_answers[1]
     is_in_correct = normalize(answer) in map(
         normalize,
         positive_answers,
@@ -21,13 +20,14 @@ def check_if_answer_correct(
     common_factor = get_common_factor(question, answer, language)
     if common_factor < Config.common_factor:
         return False
-    judged_correct = common_factor > Config.very_common_factor or (
-        normalize(answer)
-        not in map(
-            normalize,
-            negative_answers,
-        )
-        and llm_check_answer_correct(question, answer, language)
-    )
-    (positive_answers if judged_correct else negative_answers).append(answer)
+    # judged_correct = common_factor > Config.very_common_factor or (
+    #     normalize(answer)
+    #     not in map(
+    #         normalize,
+    #         negative_answers,
+    #     )
+    #     and llm_check_answer_correct(question, answer, language)
+    # )
+    judged_correct = common_factor > Config.very_common_factor
+    positive_answers.append(answer)
     return judged_correct

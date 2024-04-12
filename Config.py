@@ -12,7 +12,7 @@ class _ModelConfig:
 
 
 class Config(_ModelConfig):
-    very_common_factor = 0.35
+    very_common_factor = 0.25
     common_factor = 0.15
     root = Path(__file__).parent
     sentences = root / "sentences"

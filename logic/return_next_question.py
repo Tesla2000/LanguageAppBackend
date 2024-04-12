@@ -20,7 +20,7 @@ def return_next_question(username: str, language: str) -> str:
         next_question_index = 1 + max(map(questions.index, filter(questions.__contains__, user_questions)))
     if user_questions and (
         next_question_index >= len(questions)
-        or all(odd > Config.required_confidence for odd in odds)
+        or any(odd < Config.required_confidence for odd in odds)
     ):
         next_question_index = np.argmin(odds)
     next_question = questions[next_question_index]

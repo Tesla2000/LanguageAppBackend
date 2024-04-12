@@ -12,8 +12,8 @@ def get_answers(question: str, username: str, language: str) -> list[tuple[int, 
     cursor.execute(
         _select_query.format(language),
         (
-            question,
             username,
+            question,
         ),
     )
     return cursor.fetchall()

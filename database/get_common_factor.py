@@ -1,7 +1,7 @@
 from database.cursor import cursor
 
 _is_answer_common_query = """
-SELECT COUNT(*) / (10 + (SELECT COUNT(*) FROM {language} WHERE question = ?))
+SELECT COUNT(*) / (10.0 + (SELECT COUNT(*) FROM {language} WHERE question = ?))
 FROM {language}
 WHERE question = ? AND answer = ? 
 """
