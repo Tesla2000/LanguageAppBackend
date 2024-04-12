@@ -22,7 +22,7 @@ class Config(_ModelConfig, _DatabaseConfig):
     sentences = root / "sentences"
     data_path = root / "data"
     open_ai_api_key = root / "api_key"
-    database = root / "database" / 'mydatabase.db'
+    database = root / "database" / 'app.db'
     users_path = data_path / "users.txt"
     model_weights = root / "model_weights.pth"
 

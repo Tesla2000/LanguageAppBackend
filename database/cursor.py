@@ -4,7 +4,7 @@ import atexit
 
 from Config import Config
 
-conn = sqlite3.connect(Config.database)
+conn = sqlite3.connect(Config.database, check_same_thread=False)
 
 cursor = conn.cursor()
 

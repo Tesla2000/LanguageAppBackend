@@ -3,3 +3,4 @@
 /sandbox.py
 /model_weights.pth
 /api_key
+/database/app.db

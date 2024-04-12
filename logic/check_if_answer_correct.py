@@ -5,7 +5,7 @@ from langchain_component.llm_check_answer_correct import llm_check_answer_correc
 
 def check_if_answer_correct(question: str, answer: str, language_dict: dict[str, list[list[str]]], language: str) -> bool:
     expected_answers = language_dict[question]
-    normalize = lambda text: answer.lower().strip(".?¿!¡").replace(",", "")
+    normalize = lambda text: text.lower().strip(".?¿!¡").replace(",", "").replace('-', ' ')
     positive_answers = expected_answers[0]
     negative_answers = expected_answers[1]
     is_in_correct = normalize(answer) in map(
