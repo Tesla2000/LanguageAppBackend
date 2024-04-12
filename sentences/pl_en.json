@@ -1,1 +1,440 @@
-{"Cześć.": "Hi.", "Dzień dobry.": "Good morning.", "Dobry wieczór.": "Good evening.", "Dobranoc.": "Good night.", "Do zobaczenia wkrótce.": "See you soon.", "Do zobaczenia jutro.": "See you tomorrow.", "Do zobaczenia w sobotę.": "See you on Saturday.", "Do widzenia!": "Goodbye!", "NIE.": "NO.", "Nie wiem.": "I don't know.", "Proszę.": "Please.", "Nie rozumiem.": "I don't understand.", "Dziękuję.": "Thank you.", "Nie, dziękuję.": "No thanks.", "Przepraszam.": "Sorry.", "Przepraszam?": "Sorry?", "OK!": "OK!", "Nie ma za co.": "You're welcome.", "Ile masz lat?": "How old are you?", "Czy mogę zapytać, ile masz lat?": "Can I ask how old you are?", "Kiedy są twoje urodziny?": "When is your birthday?", "Mam lat.": "I am years old.", "Skąd jesteś?": "Where are you from?", "Gdzie mieszkasz?": "Where do you live?", "Jestem żonaty.": "I'm married.", "Mam partnera.": "I have a partner.", "Jestem singlem.": "I'm single.", "Jestem rozwiedziony.": "I'm divorced.", "Jestem owdowiała.": "I am widowed.", "Czy masz jakieś dzieci?": "Do you have any children?", "Mam dzieci.": "I have children.", "Nie mam żadnych dzieci.": "I don't have any children.", "Jak się masz?": "How are you?", "Jak leci?": "How are you?", "Jak się mają?": "How are they?", "Dzięki bardzo dobrze a ty?": "Thanks very well and you?", "Dobrze, dzięki.": "Good thanks.", "Świetnie!": "Great!", "Tak sobie.": "Not great.", "Nieźle, dzięki.": "Not bad, thanks.", "Mogło być gorzej.": "It could be worse.", "Nic mi nie jest.": "I'm fine.", "Jestem zmęczony.": "I'm tired.", "Durst.": "Durst.", "Gdzie pracujesz?": "Where do you work?", "Co robisz?": "What are you doing?", "Czym się zajmujesz?": "What do you do?", "Jestem samozatrudniony.": "I am self -employed.", "Jestem bezrobotny.": "I'm unemployed.", "Jestem na uniwersytecie.": "I am at the university.", "Jestem na emeryturze.": "I am retired.", "Ja podróżuję.": "I am travelling.", "Pracuję w domu.": "I work at home.", "Jest dziewiąta.": "It is ninth.", "To dziesięć w ciągu dziewięciu.": "It's ten in nine.", "Jest piętnaście po dziewiątej.": "It is fifteen after nine.", "Jest 25 mini dziewiątych.": "There is 25 mini nine.", "Jest w pół do dziesiątej.": "It is in half to ten.", "To 20 do dziesięciu.": "It's 20 to ten.", "To kwartał do dziesięciu.": "This is a quarter to ten.", "To pięć do dziesięciu.": "It's five to ten.", "Jest 17:30.": "It's 17:30.", "Gdy?": "When?", "Jaka jest pogoda?": "What is the weather?", "Będzie padać?": "It's going to rain?", "Co za piękny dzień!": "What a beautiful day!", "Jaka okropna pogoda!": "How terrible weather!", "Jest słonecznie.": "It's sunny.", "Jest mgliście.": "It's foggy.", "Jest lodowato.": "It is icy.", "Jest wietrznie.": "It's windy.", "Jest burzowo.": "It is stormy.", "Jest zmienny.": "Is variable."}
+{
+  "Cze\u015b\u0107.": [
+    [
+      "Hi."
+    ],
+    []
+  ],
+  "Dzie\u0144 dobry.": [
+    [
+      "Good morning."
+    ],
+    []
+  ],
+  "Dobry wiecz\u00f3r.": [
+    [
+      "Good evening."
+    ],
+    []
+  ],
+  "Dobranoc.": [
+    [
+      "Good night."
+    ],
+    []
+  ],
+  "Do zobaczenia wkr\u00f3tce.": [
+    [
+      "See you soon."
+    ],
+    []
+  ],
+  "Do zobaczenia jutro.": [
+    [
+      "See you tomorrow."
+    ],
+    []
+  ],
+  "Do zobaczenia w sobot\u0119.": [
+    [
+      "See you on Saturday."
+    ],
+    []
+  ],
+  "Do widzenia!": [
+    [
+      "Goodbye!"
+    ],
+    []
+  ],
+  "NIE.": [
+    [
+      "NO."
+    ],
+    []
+  ],
+  "Nie wiem.": [
+    [
+      "I don't know."
+    ],
+    []
+  ],
+  "Prosz\u0119.": [
+    [
+      "Please."
+    ],
+    []
+  ],
+  "Nie rozumiem.": [
+    [
+      "I don't understand."
+    ],
+    []
+  ],
+  "Dzi\u0119kuj\u0119.": [
+    [
+      "Thank you."
+    ],
+    []
+  ],
+  "Nie, dzi\u0119kuj\u0119.": [
+    [
+      "No thanks."
+    ],
+    []
+  ],
+  "Przepraszam.": [
+    [
+      "Sorry."
+    ],
+    []
+  ],
+  "Przepraszam?": [
+    [
+      "Sorry?"
+    ],
+    []
+  ],
+  "OK!": [
+    [
+      "OK!"
+    ],
+    []
+  ],
+  "Nie ma za co.": [
+    [
+      "You're welcome."
+    ],
+    []
+  ],
+  "Ile masz lat?": [
+    [
+      "How old are you?"
+    ],
+    []
+  ],
+  "Czy mog\u0119 zapyta\u0107, ile masz lat?": [
+    [
+      "Can I ask how old you are?"
+    ],
+    []
+  ],
+  "Kiedy s\u0105 twoje urodziny?": [
+    [
+      "When is your birthday?"
+    ],
+    []
+  ],
+  "Mam lat.": [
+    [
+      "I am years old."
+    ],
+    []
+  ],
+  "Sk\u0105d jeste\u015b?": [
+    [
+      "Where are you from?"
+    ],
+    []
+  ],
+  "Gdzie mieszkasz?": [
+    [
+      "Where do you live?"
+    ],
+    []
+  ],
+  "Jestem \u017conaty.": [
+    [
+      "I'm married."
+    ],
+    []
+  ],
+  "Mam partnera.": [
+    [
+      "I have a partner."
+    ],
+    []
+  ],
+  "Jestem singlem.": [
+    [
+      "I'm single."
+    ],
+    []
+  ],
+  "Jestem rozwiedziony.": [
+    [
+      "I'm divorced."
+    ],
+    []
+  ],
+  "Jestem owdowia\u0142a.": [
+    [
+      "I am widowed."
+    ],
+    []
+  ],
+  "Czy masz jakie\u015b dzieci?": [
+    [
+      "Do you have any children?"
+    ],
+    []
+  ],
+  "Mam dzieci.": [
+    [
+      "I have children."
+    ],
+    []
+  ],
+  "Nie mam \u017cadnych dzieci.": [
+    [
+      "I don't have any children."
+    ],
+    []
+  ],
+  "Jak si\u0119 masz?": [
+    [
+      "How are you?"
+    ],
+    []
+  ],
+  "Jak leci?": [
+    [
+      "How are you?"
+    ],
+    []
+  ],
+  "Jak si\u0119 maj\u0105?": [
+    [
+      "How are they?"
+    ],
+    []
+  ],
+  "Dzi\u0119ki bardzo dobrze a ty?": [
+    [
+      "Thanks very well and you?"
+    ],
+    []
+  ],
+  "Dobrze, dzi\u0119ki.": [
+    [
+      "Good thanks."
+    ],
+    []
+  ],
+  "\u015awietnie!": [
+    [
+      "Great!"
+    ],
+    []
+  ],
+  "Tak sobie.": [
+    [
+      "Not great."
+    ],
+    []
+  ],
+  "Nie\u017ale, dzi\u0119ki.": [
+    [
+      "Not bad, thanks."
+    ],
+    []
+  ],
+  "Mog\u0142o by\u0107 gorzej.": [
+    [
+      "It could be worse."
+    ],
+    []
+  ],
+  "Nic mi nie jest.": [
+    [
+      "I'm fine."
+    ],
+    []
+  ],
+  "Jestem zm\u0119czony.": [
+    [
+      "I'm tired."
+    ],
+    []
+  ],
+  "Durst.": [
+    [
+      "Durst."
+    ],
+    []
+  ],
+  "Gdzie pracujesz?": [
+    [
+      "Where do you work?"
+    ],
+    []
+  ],
+  "Co robisz?": [
+    [
+      "What are you doing?"
+    ],
+    []
+  ],
+  "Czym si\u0119 zajmujesz?": [
+    [
+      "What do you do?"
+    ],
+    []
+  ],
+  "Jestem samozatrudniony.": [
+    [
+      "I am self -employed."
+    ],
+    []
+  ],
+  "Jestem bezrobotny.": [
+    [
+      "I'm unemployed."
+    ],
+    []
+  ],
+  "Jestem na uniwersytecie.": [
+    [
+      "I am at the university."
+    ],
+    []
+  ],
+  "Jestem na emeryturze.": [
+    [
+      "I am retired."
+    ],
+    []
+  ],
+  "Ja podr\u00f3\u017cuj\u0119.": [
+    [
+      "I am travelling."
+    ],
+    []
+  ],
+  "Pracuj\u0119 w domu.": [
+    [
+      "I work at home."
+    ],
+    []
+  ],
+  "Jest dziewi\u0105ta.": [
+    [
+      "It is ninth."
+    ],
+    []
+  ],
+  "To dziesi\u0119\u0107 w ci\u0105gu dziewi\u0119ciu.": [
+    [
+      "It's ten in nine."
+    ],
+    []
+  ],
+  "Jest pi\u0119tna\u015bcie po dziewi\u0105tej.": [
+    [
+      "It is fifteen after nine."
+    ],
+    []
+  ],
+  "Jest 25 mini dziewi\u0105tych.": [
+    [
+      "There is 25 mini nine."
+    ],
+    []
+  ],
+  "Jest w p\u00f3\u0142 do dziesi\u0105tej.": [
+    [
+      "It is in half to ten."
+    ],
+    []
+  ],
+  "To 20 do dziesi\u0119ciu.": [
+    [
+      "It's 20 to ten."
+    ],
+    []
+  ],
+  "To kwarta\u0142 do dziesi\u0119ciu.": [
+    [
+      "This is a quarter to ten."
+    ],
+    []
+  ],
+  "To pi\u0119\u0107 do dziesi\u0119ciu.": [
+    [
+      "It's five to ten."
+    ],
+    []
+  ],
+  "Jest 17:30.": [
+    [
+      "It's 17:30."
+    ],
+    []
+  ],
+  "Gdy?": [
+    [
+      "When?"
+    ],
+    []
+  ],
+  "Jaka jest pogoda?": [
+    [
+      "What is the weather?"
+    ],
+    []
+  ],
+  "B\u0119dzie pada\u0107?": [
+    [
+      "It's going to rain?"
+    ],
+    []
+  ],
+  "Co za pi\u0119kny dzie\u0144!": [
+    [
+      "What a beautiful day!"
+    ],
+    []
+  ],
+  "Jaka okropna pogoda!": [
+    [
+      "How terrible weather!"
+    ],
+    []
+  ],
+  "Jest s\u0142onecznie.": [
+    [
+      "It's sunny."
+    ],
+    []
+  ],
+  "Jest mgli\u015bcie.": [
+    [
+      "It's foggy."
+    ],
+    []
+  ],
+  "Jest lodowato.": [
+    [
+      "It is icy."
+    ],
+    []
+  ],
+  "Jest wietrznie.": [
+    [
+      "It's windy."
+    ],
+    []
+  ],
+  "Jest burzowo.": [
+    [
+      "It is stormy."
+    ],
+    []
+  ],
+  "Jest zmienny.": [
+    [
+      "Is variable."
+    ],
+    []
+  ]
+}

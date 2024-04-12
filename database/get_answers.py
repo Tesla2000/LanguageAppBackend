@@ -1,14 +1,19 @@
-from Config import Config
-from .cursor import cursor
+from database.cursor import cursor
 
-_select_query = f'''
-SELECT (CURRENT_TIMESTAMP - time, is_answer_correct)
-FROM {Config.question_answers_table}
+_select_query = """
+SELECT julianday(CURRENT_TIMESTAMP) - julianday(time) AS time_diff, is_answer_correct
+FROM {}
 WHERE username = ? AND question = ?
 ORDER BY time;
-'''
+"""
 
 
-def get_answers(question: str, username: str) -> list[tuple[int, bool]]:
-    cursor.execute(_select_query, (question, username,))
+def get_answers(question: str, username: str, language: str) -> list[tuple[int, bool]]:
+    cursor.execute(
+        _select_query.format(language),
+        (
+            username,
+            question,
+        ),
+    )
     return cursor.fetchall()

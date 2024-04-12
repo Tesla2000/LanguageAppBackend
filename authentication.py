@@ -35,9 +35,7 @@ def check_token():
 
 
 def generate_token(username):
-    # Set expiration time for the token (e.g., 1 day from now)
     expiry = datetime.utcnow() + timedelta(days=1)
     payload = {"username": username, "exp": expiry}
-    # Generate JWT token
     token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
     return token
