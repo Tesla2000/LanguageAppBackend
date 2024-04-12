@@ -1,6 +1,5 @@
 from Config import Config
 from database.get_common_factor import get_common_factor
-from langchain_component.llm_check_answer_correct import llm_check_answer_correct
 
 
 def check_if_answer_correct(
