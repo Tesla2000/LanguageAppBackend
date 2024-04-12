@@ -1,3 +1,5 @@
+import random
+
 import numpy as np
 
 from Config import Config
@@ -16,9 +18,11 @@ def return_next_question(username: str, language: str) -> str:
     )
     questions = tuple(language_dict.keys())
     next_question_index = 0
-    if user_questions:
+    if user_questions and random.random() < Config.repeat_question_at_random_chance:
+        next_question_index = random.choice(tuple(map(questions.index, filter(questions.__contains__, user_questions))))
+    elif user_questions:
         next_question_index = 1 + max(map(questions.index, filter(questions.__contains__, user_questions)))
-    if user_questions and (
+    elif user_questions and (
         next_question_index >= len(questions)
         or any(odd < Config.required_confidence for odd in odds)
     ):

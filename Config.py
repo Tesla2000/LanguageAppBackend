@@ -12,6 +12,7 @@ class _ModelConfig:
 
 
 class Config(_ModelConfig):
+    repeat_question_at_random_chance = .25
     very_common_factor = 0.25
     common_factor = 0.15
     root = Path(__file__).parent
