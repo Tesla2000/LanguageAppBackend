@@ -8,8 +8,8 @@ conn = sqlite3.connect(Config.database, check_same_thread=False)
 
 cursor = conn.cursor()
 
-create_table_query = '''
-CREATE TABLE IF NOT EXISTS QuestionAnswers (
+create_table_query = """
+CREATE TABLE IF NOT EXISTS {} (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     question TEXT NOT NULL,
@@ -17,10 +17,11 @@ CREATE TABLE IF NOT EXISTS QuestionAnswers (
     username TEXT NOT NULL,
     is_answer_correct BOOLEAN NOT NULL 
 );
-'''
+"""
 
 # Execute the SQL statement to create the table
-cursor.execute(create_table_query)
+for file in Config.sentences.glob("*.json"):
+    cursor.execute(create_table_query.format(file.with_suffix("").name))
 
 # Commit changes and close the connection
 conn.commit()

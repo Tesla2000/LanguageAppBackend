@@ -13,9 +13,7 @@ class ChanceCalculator(nn.Module):
         self.gru = nn.GRU(2, hidden_size)
         self.fc = nn.Linear(in_features=hidden_size, out_features=1)
 
-    def forward(
-        self, samples: list[tuple[int, bool]]
-    ) -> torch.Tensor:
+    def forward(self, samples: list[tuple[int, bool]]) -> torch.Tensor:
         samples = torch.Tensor(samples).unsqueeze(1)
         hn = torch.zeros((1, self.hidden_size))
         for sample in samples:

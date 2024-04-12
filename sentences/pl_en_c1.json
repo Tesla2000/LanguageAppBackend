@@ -41,12 +41,6 @@
     ],
     []
   ],
-  "seminarium": [
-    [
-      "a certificate of completion"
-    ],
-    []
-  ],
   "index": [
     [
       "an index hook"
@@ -79,7 +73,7 @@
   ],
   "komisja egzaminacyjna": [
     [
-      "an examining board"
+      "examining board"
     ],
     []
   ],
@@ -91,25 +85,25 @@
   ],
   "doktorant": [
     [
-      "a PhD student"
+      "PhD student"
     ],
     []
   ],
   "recenzent pracy naukowej": [
     [
-      "an examiner of a thesis"
+      "examiner"
     ],
     []
   ],
   "promotor": [
     [
-      "a thesis supervisor"
+      "supervisor"
     ],
     []
   ],
   "praktykant": [
     [
-      "a trainee"
+      "trainee"
     ],
     []
   ],
@@ -119,7 +113,7 @@
     ],
     []
   ],
-  "studia zaczne": [
+  "studia zaoczne": [
     [
       "extramural studies"
     ],
