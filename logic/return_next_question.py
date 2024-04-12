@@ -28,5 +28,5 @@ def return_next_question(username: str, language: str) -> str:
     ):
         next_question_index = np.argmin(odds)
     next_question = questions[next_question_index]
-    next_sentence = f"{next_question};{language_dict[next_question]}"
+    next_sentence = f"{next_question};{language_dict[next_question][0][0]}"
     return next_sentence
