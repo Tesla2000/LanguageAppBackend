@@ -1,15 +1,13 @@
-from .cursor import conn, cursor
+import sqlalchemy
 
-_insert_query = """
-INSERT INTO {} (question, answer, username, is_answer_correct)
-VALUES (?, ?, ?, ?);
-"""
+from database.session import qa_tables, conn
 
 
 def insert_answer(
     question: str, answer: str, username: str, is_answer_correct: bool, language: str
 ):
-    cursor.execute(
-        _insert_query.format(language), (question, answer, username, is_answer_correct)
-    )
+    QA = qa_tables[language]
+    query = sqlalchemy.insert(QA).values(
+        question=question, answer=answer, username=username, is_answer_correct=is_answer_correct)
+    conn.execute(query)
     conn.commit()
