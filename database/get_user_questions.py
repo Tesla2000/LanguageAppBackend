@@ -1,13 +1,9 @@
-from .cursor import cursor
+import sqlalchemy
 
-_unique_questions_query = """
-SELECT DISTINCT question
-FROM {}
-WHERE username = ?;
-"""
+from .session import qa_tables, session
 
 
 def get_user_questions(username: str, language: str) -> list[str]:
-    cursor.execute(_unique_questions_query.format(language), (username,))
-    unique_questions = cursor.fetchall()
-    return [question[0] for question in unique_questions]
+    QA = qa_tables[language]
+    query = sqlalchemy.select(QA.question).filter(QA.username == username).distinct()
+    return session.execute(query).fetchall()

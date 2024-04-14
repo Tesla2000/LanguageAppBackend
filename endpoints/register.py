@@ -1,6 +1,6 @@
 from flask import request, jsonify
 
-from Config import Config
+from database.create_user import create_user
 from flask_app import app, bcrypt
 
 
@@ -8,18 +8,12 @@ from flask_app import app, bcrypt
 def register():
     data = request.get_json()
 
-    # Check if all required fields are present
     if "username" not in data or "password" not in data:
         return jsonify({"error": "Missing username or password"}), 400
 
     username = data["username"]
-
-    with Config.users_path.open() as file:
-        while user := file.readline().strip():
-            if username == user.split()[0]:
-                return jsonify({"error": "Username already exists"}), 400
-    with Config.users_path.open("a") as file:
-        file.write(
-            f"{username} {bcrypt.generate_password_hash(data['password']).decode('utf-8')}\n"
-        )
+    try:
+        create_user(username, bcrypt.generate_password_hash(data['password']).decode('utf-8'))
+    except AssertionError:
+        return jsonify({"error": "Username already exists"}), 400
     return jsonify({"message": "User registered successfully"}), 201
