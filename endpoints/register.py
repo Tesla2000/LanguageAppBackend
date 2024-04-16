@@ -12,8 +12,6 @@ def register():
         return jsonify({"error": "Missing username or password"}), 400
 
     username = data["username"]
-    try:
-        create_user(username, bcrypt.generate_password_hash(data['password']).decode('utf-8'))
-    except AssertionError:
-        return jsonify({"error": "Username already exists"}), 400
-    return jsonify({"message": "User registered successfully"}), 201
+    if create_user(username, bcrypt.generate_password_hash(data['password']).decode('utf-8')):
+        return jsonify({"message": "User registered successfully"}), 201
+    return jsonify({"error": "Username already exists"}), 400
