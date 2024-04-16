@@ -19,10 +19,6 @@ for file in Config.sentences.glob("*.json"):
         "username": Column(String, nullable=False),
         "is_answer_correct": Column(Boolean, nullable=False),
     })
-    if not engine.dialect.has_table(conn, file.with_suffix('').name):
-        Base.metadata.create_all(engine)
-    else:
-        Base.metadata.clear()
 
 
 class Users(Base):
@@ -31,10 +27,7 @@ class Users(Base):
     password = Column(String, nullable=False)
 
 
-if not engine.dialect.has_table(conn, "Users"):
-    Base.metadata.create_all(engine)
-else:
-    Base.metadata.clear()
+Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()

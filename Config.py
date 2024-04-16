@@ -12,6 +12,8 @@ class _ModelConfig:
 
 
 class Config(_ModelConfig):
+    recent_answer_count_to_accept = 1
+    recent_answer_time_threshold = 20
     repeat_question_at_random_chance = .25
     very_common_factor = 0.25
     common_factor = 0.15
