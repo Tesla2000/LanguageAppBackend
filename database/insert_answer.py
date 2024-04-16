@@ -1,6 +1,6 @@
 import sqlalchemy
 
-from database.session import qa_tables, conn
+from database.session import qa_tables, session
 
 
 def insert_answer(
@@ -9,5 +9,5 @@ def insert_answer(
     QA = qa_tables[language]
     query = sqlalchemy.insert(QA).values(
         question=question, answer=answer, username=username, is_answer_correct=is_answer_correct)
-    conn.execute(query)
-    conn.commit()
+    session.execute(query)
+    session.commit()

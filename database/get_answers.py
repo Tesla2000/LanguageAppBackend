@@ -1,6 +1,6 @@
 from sqlalchemy import text
 
-from database.session import conn
+from database.session import session
 
 _select_query = """
 SELECT julianday(CURRENT_TIMESTAMP) - julianday(time) AS time_diff, is_answer_correct
@@ -11,7 +11,7 @@ ORDER BY time;
 
 
 def get_answers(question: str, username: str, language: str) -> list[tuple[int, bool]]:
-    result = conn.execute(
+    result = session.execute(
         text(_select_query.format(language)),
         {
             "username": username,

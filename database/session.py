@@ -5,7 +5,6 @@ import atexit
 from Config import Config
 
 engine = create_engine(f"sqlite+pysqlite:///{Config.database.absolute()}", echo=True)
-conn = engine.connect()
 
 Base = declarative_base()
 qa_tables = {}
@@ -34,6 +33,5 @@ session = Session()
 
 
 @atexit.register
-def close_connection():
+def close_session():
     session.close()
-    conn.close()
