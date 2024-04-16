@@ -1,21 +1,12 @@
-from sqlalchemy import text
+from datetime import datetime
 
-from database.session import conn
+from sqlalchemy import select
 
-_select_query = """
-SELECT julianday(CURRENT_TIMESTAMP) - julianday(time) AS time_diff, is_answer_correct
-FROM {}
-WHERE username = :username AND question = :question
-ORDER BY time;
-"""
+from database.session import qa_tables, session
 
 
 def get_answers(question: str, username: str, language: str) -> list[tuple[int, bool]]:
-    result = conn.execute(
-        text(_select_query.format(language)),
-        {
-            "username": username,
-            "question": question,
-        },
-    )
-    return result.fetchall()
+    QA = qa_tables[language]
+    results = session.execute(
+        select(QA.time, QA.is_answer_correct).where(QA.username == username, QA.question == question)).fetchall()
+    return list(((datetime.now() - time).seconds, bool(is_answer_correct)) for time, is_answer_correct in results)

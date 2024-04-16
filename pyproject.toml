@@ -6,8 +6,6 @@ authors = ["Tesla2000 <fratajczak124@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-langchain = "^0.1.16"
-langchain-openai = "^0.1.3"
 Flask = "^3.0.3"
 torch = "^2.2.2"
 Flask-Bcrypt = "^1.0.1"
