@@ -13,7 +13,7 @@ def return_next_question(username: str, language: str) -> str:
     language_dict: dict = sentences.get(language)
     user_questions = get_user_questions(username, language)
     questions = tuple(language_dict.keys())
-    user_questions = tuple(filter(questions.__contains__, user_questions))
+    user_questions = set(filter(questions.__contains__, user_questions))
     if user_questions and random.random() < Config.repeat_question_at_random_chance:
         next_question_index = random.choice(tuple(map(questions.index, user_questions)))
         next_question = questions[next_question_index]
