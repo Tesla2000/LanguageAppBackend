@@ -24,7 +24,7 @@ def return_next_question(username: str, language: str) -> str:
         for question in user_questions
     ))
     next_question_index = 0
-    if len(user_questions) == questions or (user_questions and any(odd < Config.required_confidence for odd in odds)):
+    if len(user_questions) == len(questions) or (user_questions and any(odd < Config.required_confidence for odd in odds)):
         probabilities = 1 / odds - 1
         probabilities /= np.sum(probabilities)
         next_question_index = np.random.choice(range(len(odds)), p=probabilities)
