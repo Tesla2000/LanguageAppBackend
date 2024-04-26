@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, TIMESTAMP, create_engine
+from sqlalchemy import Column, Integer, String, Boolean, TIMESTAMP, create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 import atexit
 
@@ -13,7 +13,7 @@ for file in Config.sentences.glob("*.json"):
     qa_tables[file.with_suffix('').name] = type(file.with_suffix('').name, (Base,), {
         "__tablename__": file.with_suffix('').name,
         "id": Column(Integer, primary_key=True, autoincrement=True),
-        "time": Column(TIMESTAMP, nullable=False, server_default='CURRENT_TIMESTAMP'),
+        "time": Column(TIMESTAMP, nullable=False, server_default=text('CURRENT_TIMESTAMP')),
         "question": Column(String, nullable=False),
         "answer": Column(String, nullable=False),
         "username": Column(String, nullable=False),

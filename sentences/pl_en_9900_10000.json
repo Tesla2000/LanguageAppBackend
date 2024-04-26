@@ -1,101 +1,596 @@
 {
-  "rozpowszechniony": "prevalent",
-  "zapobieganie": "prevention",
-  "kolczasty": "prickly",
-  "dziewiczy": "primeval",
-  "g\u0142oszenie": "proclamation",
-  "szturcha\u0107": "prod",
-  "marnotrawny": "prodigal",
-  "cudowny": "prodigious",
-  "bezcze\u015bci\u0107": "profane",
-  "blu\u017anierstwo": "profanity",
-  "wyzna\u0107": "profess",
-  "potomstwo": "progeny",
-  "zakaz": "prohibition",
-  "wyst\u0119p": "projection",
-  "nap\u0119dza\u0107": "propel",
-  "dobrobyt": "prosperity",
-  "tymczasowy": "provisional",
-  "dzielno\u015b\u0107": "prowess",
-  "grasowa\u0107": "prowl",
-  "ostro\u017cny": "prudent",
-  "przebicie": "puncture",
-  "oczyszcza\u0107": "purge",
-  "oczy\u015bci\u0107": "purify",
-  "energiczny": "pushful",
-  "gni\u0107": "putrefy",
-  "gnij\u0105cy": "putrescent",
-  "zak\u0142opotanie": "puzzlement",
-  "dr\u017ce\u0107": "quake",
-  "trz\u0119sienie": "quaking",
-  "k\u0142opot": "quandary",
-  "k\u0142\u00f3tliwy": "quarrelsome",
-  "prawie": "quasi",
-  "st\u0142umi\u0107": "quell",
-  "ugasi\u0107": "quench",
-  "w\u015bciek\u0142y": "rabid",
-  "promienny": "radiant",
-  "zje\u0142cza\u0142y": "rancid",
-  "roz\u017calony": "rancorous",
-  "tyrada": "rant",
-  "drapie\u017cno\u015b\u0107": "rapacity",
-  "skupiony": "rapt",
-  "rzadko\u015b\u0107": "rarity",
-  "zgrzyt": "rasp",
-  "wyg\u0142odnia\u0142y": "ravenous",
-  "bunt": "rebellion",
-  "odprawa": "rebuff",
-  "wyrzec si\u0119": "recant",
-  "przerobi\u0107": "recast",
-  "oddala\u0107 si\u0119": "recede",
-  "ch\u0142onny": "reseptive",
-  "odbiorca": "recipient",
-  "odwrotno\u015b\u0107": "reciprocal",
-  "recytowa\u0107": "recite",
-  "my\u015ble\u0107": "reckon",
-  "prostok\u0105t": "rectangle",
-  "sprostowanie": "rectification",
-  "zregenerowa\u0107": "recuperate",
-  "nawracaj\u0105cy": "recurrent",
-  "czerwieni\u0107": "redden",
-  "odkupi\u0107": "redeem",
-  "naprawia\u0107 krzywd\u0119": "redress",
-  "trzcina": "reed",
-  "smr\u00f3d": "reek",
-  "s\u0119dzia": "referee",
-  "reforma": "reform",
-  "zamra\u017ca\u0107": "refrigerate",
-  "odmawia\u0107": "refuse",
-  "skruszony": "regretful",
-  "godny po\u017ca\u0142owania": "regrettable",
-  "recydywa": "relapse",
-  "poleganie": "reliance",
-  "ufny": "reliant",
-  "smakowa\u0107": "relish",
-  "pami\u0119\u0107": "remembrance",
-  "niedba\u0142y": "remiss",
-  "renesans": "renaissance",
-  "odnowienie": "renewal",
-  "odpychaj\u0105cy": "repellent",
-  "replika": "replica",
-  "odpoczynek": "repose",
-  "naganny": "reprehensible",
-  "gani\u0107": "reprove",
-  "reputacja": "repute",
-  "przypomina\u0107": "resemble",
-  "ura\u017cony": "resentful",
-  "pozosta\u0142o\u015b\u0107": "resedue",
-  "cze\u015b\u0107": "reverence",
-  "Odwraca\u0107": "revert",
-  "uniewa\u017cni\u0107": "revoke",
-  "obraca\u0107 si\u0119": "revolve",
-  "wstr\u0119t": "revulsion",
-  "rygor": "rigour",
-  "rozbrykany": "riotous",
-  "g\u00f3rnolotny": "rotund",
-  "rondo": "roundabout",
-  "plecak": "rucksack",
-  "prymitywny": "rudimentary",
-  "rujnuj\u0105cy": "ruinous",
-  "podst\u0119p": "ruse"
+  "rozpowszechniony": [
+    [
+      "prevalent"
+    ],
+    []
+  ],
+  "zapobieganie": [
+    [
+      "prevention"
+    ],
+    []
+  ],
+  "kolczasty": [
+    [
+      "prickly"
+    ],
+    []
+  ],
+  "dziewiczy": [
+    [
+      "primeval"
+    ],
+    []
+  ],
+  "g\u0142oszenie": [
+    [
+      "proclamation"
+    ],
+    []
+  ],
+  "szturcha\u0107": [
+    [
+      "prod"
+    ],
+    []
+  ],
+  "marnotrawny": [
+    [
+      "prodigal"
+    ],
+    []
+  ],
+  "cudowny": [
+    [
+      "prodigious"
+    ],
+    []
+  ],
+  "bezcze\u015bci\u0107": [
+    [
+      "profane"
+    ],
+    []
+  ],
+  "blu\u017anierstwo": [
+    [
+      "profanity"
+    ],
+    []
+  ],
+  "wyzna\u0107": [
+    [
+      "profess"
+    ],
+    []
+  ],
+  "potomstwo": [
+    [
+      "progeny"
+    ],
+    []
+  ],
+  "zakaz": [
+    [
+      "prohibition"
+    ],
+    []
+  ],
+  "wyst\u0119p": [
+    [
+      "projection"
+    ],
+    []
+  ],
+  "nap\u0119dza\u0107": [
+    [
+      "propel"
+    ],
+    []
+  ],
+  "dobrobyt": [
+    [
+      "prosperity"
+    ],
+    []
+  ],
+  "tymczasowy": [
+    [
+      "provisional"
+    ],
+    []
+  ],
+  "dzielno\u015b\u0107": [
+    [
+      "prowess"
+    ],
+    []
+  ],
+  "grasowa\u0107": [
+    [
+      "prowl"
+    ],
+    []
+  ],
+  "ostro\u017cny": [
+    [
+      "prudent"
+    ],
+    []
+  ],
+  "przebicie": [
+    [
+      "puncture"
+    ],
+    []
+  ],
+  "oczyszcza\u0107": [
+    [
+      "purge"
+    ],
+    []
+  ],
+  "oczy\u015bci\u0107": [
+    [
+      "purify"
+    ],
+    []
+  ],
+  "energiczny": [
+    [
+      "pushful"
+    ],
+    []
+  ],
+  "gni\u0107": [
+    [
+      "putrefy"
+    ],
+    []
+  ],
+  "gnij\u0105cy": [
+    [
+      "putrescent"
+    ],
+    []
+  ],
+  "zak\u0142opotanie": [
+    [
+      "puzzlement"
+    ],
+    []
+  ],
+  "dr\u017ce\u0107": [
+    [
+      "quake"
+    ],
+    []
+  ],
+  "trz\u0119sienie": [
+    [
+      "quaking"
+    ],
+    []
+  ],
+  "k\u0142opot": [
+    [
+      "quandary"
+    ],
+    []
+  ],
+  "k\u0142\u00f3tliwy": [
+    [
+      "quarrelsome"
+    ],
+    []
+  ],
+  "prawie": [
+    [
+      "quasi"
+    ],
+    []
+  ],
+  "st\u0142umi\u0107": [
+    [
+      "quell"
+    ],
+    []
+  ],
+  "ugasi\u0107": [
+    [
+      "quench"
+    ],
+    []
+  ],
+  "w\u015bciek\u0142y": [
+    [
+      "rabid"
+    ],
+    []
+  ],
+  "promienny": [
+    [
+      "radiant"
+    ],
+    []
+  ],
+  "zje\u0142cza\u0142y": [
+    [
+      "rancid"
+    ],
+    []
+  ],
+  "roz\u017calony": [
+    [
+      "rancorous"
+    ],
+    []
+  ],
+  "tyrada": [
+    [
+      "rant"
+    ],
+    []
+  ],
+  "drapie\u017cno\u015b\u0107": [
+    [
+      "rapacity"
+    ],
+    []
+  ],
+  "skupiony": [
+    [
+      "rapt"
+    ],
+    []
+  ],
+  "rzadko\u015b\u0107": [
+    [
+      "rarity"
+    ],
+    []
+  ],
+  "zgrzyt": [
+    [
+      "rasp"
+    ],
+    []
+  ],
+  "wyg\u0142odnia\u0142y": [
+    [
+      "ravenous"
+    ],
+    []
+  ],
+  "bunt": [
+    [
+      "rebellion"
+    ],
+    []
+  ],
+  "odprawa": [
+    [
+      "rebuff"
+    ],
+    []
+  ],
+  "wyrzec si\u0119": [
+    [
+      "recant"
+    ],
+    []
+  ],
+  "przerobi\u0107": [
+    [
+      "recast"
+    ],
+    []
+  ],
+  "oddala\u0107 si\u0119": [
+    [
+      "recede"
+    ],
+    []
+  ],
+  "ch\u0142onny": [
+    [
+      "reseptive"
+    ],
+    []
+  ],
+  "odbiorca": [
+    [
+      "recipient"
+    ],
+    []
+  ],
+  "odwrotno\u015b\u0107": [
+    [
+      "reciprocal"
+    ],
+    []
+  ],
+  "recytowa\u0107": [
+    [
+      "recite"
+    ],
+    []
+  ],
+  "my\u015ble\u0107": [
+    [
+      "reckon"
+    ],
+    []
+  ],
+  "prostok\u0105t": [
+    [
+      "rectangle"
+    ],
+    []
+  ],
+  "sprostowanie": [
+    [
+      "rectification"
+    ],
+    []
+  ],
+  "zregenerowa\u0107": [
+    [
+      "recuperate"
+    ],
+    []
+  ],
+  "nawracaj\u0105cy": [
+    [
+      "recurrent"
+    ],
+    []
+  ],
+  "czerwieni\u0107": [
+    [
+      "redden"
+    ],
+    []
+  ],
+  "odkupi\u0107": [
+    [
+      "redeem"
+    ],
+    []
+  ],
+  "naprawia\u0107 krzywd\u0119": [
+    [
+      "redress"
+    ],
+    []
+  ],
+  "trzcina": [
+    [
+      "reed"
+    ],
+    []
+  ],
+  "smr\u00f3d": [
+    [
+      "reek"
+    ],
+    []
+  ],
+  "s\u0119dzia": [
+    [
+      "referee"
+    ],
+    []
+  ],
+  "reforma": [
+    [
+      "reform"
+    ],
+    []
+  ],
+  "zamra\u017ca\u0107": [
+    [
+      "refrigerate"
+    ],
+    []
+  ],
+  "odmawia\u0107": [
+    [
+      "refuse"
+    ],
+    []
+  ],
+  "skruszony": [
+    [
+      "regretful"
+    ],
+    []
+  ],
+  "godny po\u017ca\u0142owania": [
+    [
+      "regrettable"
+    ],
+    []
+  ],
+  "recydywa": [
+    [
+      "relapse"
+    ],
+    []
+  ],
+  "poleganie": [
+    [
+      "reliance"
+    ],
+    []
+  ],
+  "ufny": [
+    [
+      "reliant"
+    ],
+    []
+  ],
+  "smakowa\u0107": [
+    [
+      "relish"
+    ],
+    []
+  ],
+  "pami\u0119\u0107": [
+    [
+      "remembrance"
+    ],
+    []
+  ],
+  "niedba\u0142y": [
+    [
+      "remiss"
+    ],
+    []
+  ],
+  "renesans": [
+    [
+      "renaissance"
+    ],
+    []
+  ],
+  "odnowienie": [
+    [
+      "renewal"
+    ],
+    []
+  ],
+  "odpychaj\u0105cy": [
+    [
+      "repellent"
+    ],
+    []
+  ],
+  "replika": [
+    [
+      "replica"
+    ],
+    []
+  ],
+  "odpoczynek": [
+    [
+      "repose"
+    ],
+    []
+  ],
+  "naganny": [
+    [
+      "reprehensible"
+    ],
+    []
+  ],
+  "gani\u0107": [
+    [
+      "reprove"
+    ],
+    []
+  ],
+  "reputacja": [
+    [
+      "repute"
+    ],
+    []
+  ],
+  "przypomina\u0107": [
+    [
+      "resemble"
+    ],
+    []
+  ],
+  "ura\u017cony": [
+    [
+      "resentful"
+    ],
+    []
+  ],
+  "pozosta\u0142o\u015b\u0107": [
+    [
+      "resedue"
+    ],
+    []
+  ],
+  "cze\u015b\u0107": [
+    [
+      "reverence"
+    ],
+    []
+  ],
+  "Odwraca\u0107": [
+    [
+      "revert"
+    ],
+    []
+  ],
+  "uniewa\u017cni\u0107": [
+    [
+      "revoke"
+    ],
+    []
+  ],
+  "obraca\u0107 si\u0119": [
+    [
+      "revolve"
+    ],
+    []
+  ],
+  "wstr\u0119t": [
+    [
+      "revulsion"
+    ],
+    []
+  ],
+  "rygor": [
+    [
+      "rigour"
+    ],
+    []
+  ],
+  "rozbrykany": [
+    [
+      "riotous"
+    ],
+    []
+  ],
+  "g\u00f3rnolotny": [
+    [
+      "rotund"
+    ],
+    []
+  ],
+  "rondo": [
+    [
+      "roundabout"
+    ],
+    []
+  ],
+  "plecak": [
+    [
+      "rucksack"
+    ],
+    []
+  ],
+  "prymitywny": [
+    [
+      "rudimentary"
+    ],
+    []
+  ],
+  "rujnuj\u0105cy": [
+    [
+      "ruinous"
+    ],
+    []
+  ],
+  "podst\u0119p": [
+    [
+      "ruse"
+    ],
+    []
+  ]
 }
