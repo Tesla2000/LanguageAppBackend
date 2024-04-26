@@ -22,9 +22,4 @@ class Config(_ModelConfig):
     data_path = root / "data"
     open_ai_api_key = root / "api_key"
     database = root / "database" / "app.db"
-    users_path = data_path / "users.txt"
     model_weights = root / "model_weights.pth"
-
-
-if not Config.users_path.exists():
-    Config.users_path.write_text("")
